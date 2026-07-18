@@ -1,0 +1,1265 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+body{
+
+background:#020617;
+color:white;
+
+}
+
+
+header{
+
+background:#0f172a;
+padding:20px;
+
+}
+
+
+nav{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+
+nav ul{
+
+display:flex;
+gap:25px;
+list-style:none;
+
+}
+
+
+
+.hero{
+
+min-height:90vh;
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:50px;
+
+}
+
+
+.intro h1{
+
+font-size:55px;
+color:#38bdf8;
+
+}
+
+
+.intro h2{
+
+font-size:32px;
+
+}
+
+
+.intro p{
+
+font-size:20px;
+margin:20px 0;
+
+}
+
+
+button{
+
+padding:15px 30px;
+background:#38bdf8;
+border:none;
+border-radius:10px;
+font-weight:bold;
+
+}
+
+
+
+.chip{
+
+width:260px;
+height:260px;
+border:4px solid #38bdf8;
+border-radius:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+
+.chip div{
+
+background:#38bdf8;
+color:black;
+padding:40px;
+font-size:30px;
+text-align:center;
+
+}
+
+
+
+section{
+
+padding:60px 8%;
+
+}
+
+
+section h1{
+
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+
+}
+
+
+
+.grid,
+.projects{
+
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+
+
+.box{
+
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+width:280px;
+
+}
+
+
+
+.box:hover{
+
+transform:translateY(-10px);
+transition:.3s;
+
+}
+
+
+
+.contact{
+
+text-align:center;
+
+}
+
+
+footer{
+
+text-align:center;
+padding:20px;
+background:#0f172a;
+
+}
+
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+
+nav{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+
+nav ul{
+
+font-size:14px;
+
+}
+
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+gap:50px;
+
+}
+
+
+.intro h1{
+
+font-size:38px;
+
+}
+
+
+.intro h2{
+
+font-size:25px;
+
+}
+
+
+.chip{
+
+width:200px;
+height:200px;
+
+}
+
+
+section h1{
+
+font-size:32px;
+
+}
+
+
+.box{
+
+width:90%;
+
+}
+
+}
+/* Contact Links */
+
+.contact p{
+    text-align:center;
+    font-size:20px;
+}
+
+
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 10px;
+    padding:8px;
+    border-radius:8px;
+}
+
+
+.contact a:hover{
+    background:#38bdf8;
+    color:#020617;
+    transition:0.3s;
+}
+/* Smooth page animation */
+body{
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+/* Hero text animation */
+.intro h1{
+    animation: slideLeft 1s ease;
+}
+
+.intro h2{
+    animation: slideLeft 1.3s ease;
+}
+
+.intro p{
+    animation: slideLeft 1.6s ease;
+}
+
+
+@keyframes slideLeft{
+    from{
+        transform:translateX(-80px);
+        opacity:0;
+    }
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+/* RTL Chip Animation */
+
+.chip{
+    animation: rotateChip 4s infinite linear;
+}
+
+
+@keyframes rotateChip{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    50%{
+        transform:rotate(5deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+
+}
+
+
+
+/* Skill card animation */
+
+.box{
+    animation: upCard 1s ease;
+}
+
+
+@keyframes upCard{
+
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+}
+
+
+
+/* Button animation */
+
+button{
+    cursor:pointer;
+    animation:pulse 2s infinite;
+}
+
+
+@keyframes pulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(56,189,248,0.7);
+    }
+
+    70%{
+        box-shadow:0 0 0 20px rgba(56,189,248,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(56,189,248,0);
+    }
+
+}
+
+
+
+/* Link hover animation */
+
+.contact a{
+    display:inline-block;
+    transition:0.3s;
+}
+
+
+.contact a:hover{
+
+    transform:translateY(-5px) scale(1.1);
+
+}
+/* Smooth scrolling */
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* Navigation links */
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    position:relative;
+
+}
+
+
+/* Hover animation */
+
+nav a::after{
+
+    content:"";
+    position:absolute;
+    width:0;
+    height:3px;
+    background:#38bdf8;
+    left:0;
+    bottom:-8px;
+    transition:0.4s;
+
+}
+
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+nav a:hover{
+
+    color:#38bdf8;
+    transform:translateY(-3px);
+
+}
+
+
+/* Section reveal animation */
+
+section{
+
+    animation:showSection 1s ease;
+
+}
+
+
+@keyframes showSection{
+
+from{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+/* Portfolio Entry Animation */
+
+.hero .intro{
+    animation: slideInLeft 1.2s ease forwards;
+}
+
+
+.chip{
+    animation: slideInRight 1.2s ease forwards;
+}
+
+
+header{
+    animation: slideDown 1s ease forwards;
+}
+
+
+@keyframes slideInLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+@keyframes slideInRight{
+
+    from{
+        opacity:0;
+        transform:translateX(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+@keyframes slideDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* Skill and project cards entry */
+
+.box{
+
+    animation: cardEntry 1s ease forwards;
+
+}
+
+
+@keyframes cardEntry{
+
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+.resume-btn{
+
+display:inline-block;
+background:#38bdf8;
+color:#020617;
+padding:15px 30px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+
+}
+
+
+.resume-btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 0 20px #38bdf8;
+
+}
+/* Animated RTL Chip Background */
+
+body{
+    position:relative;
+    overflow-x:hidden;
+}
+
+
+.chip-bg{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background:
+    linear-gradient(90deg,#020617 1px,transparent 1px),
+    linear-gradient(#020617 1px,transparent 1px);
+    background-size:40px 40px;
+    opacity:0.5;
+
+}
+
+
+/* Moving signal lines */
+
+.chip-bg span{
+
+    position:absolute;
+    width:120px;
+    height:3px;
+    background:#38bdf8;
+    box-shadow:0 0 15px #38bdf8;
+    animation:signal 5s linear infinite;
+
+}
+
+
+.chip-bg span:nth-child(1){
+
+top:20%;
+left:-150px;
+
+}
+
+
+.chip-bg span:nth-child(2){
+
+top:40%;
+left:-200px;
+animation-delay:1s;
+
+}
+
+
+.chip-bg span:nth-child(3){
+
+top:60%;
+left:-250px;
+animation-delay:2s;
+
+}
+
+
+.chip-bg span:nth-child(4){
+
+top:75%;
+left:-100px;
+animation-delay:3s;
+
+}
+
+
+.chip-bg span:nth-child(5){
+
+top:30%;
+left:-300px;
+animation-delay:4s;
+
+}
+
+
+
+@keyframes signal{
+
+0%{
+transform:translateX(0);
+opacity:0;
+}
+
+
+20%{
+opacity:1;
+}
+
+
+100%{
+transform:translateX(120vw);
+opacity:0;
+}
+
+}
+/* Advanced RTL Chip Animation */
+
+
+.rtl-bg{
+
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+overflow:hidden;
+
+background:
+radial-gradient(circle,#0f172a,#020617);
+
+}
+
+
+
+/* Chip Core */
+
+.chip-core{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+
+width:230px;
+height:230px;
+
+border:3px solid #38bdf8;
+
+border-radius:25px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:#38bdf8;
+
+box-shadow:
+0 0 20px #38bdf8,
+0 0 60px #38bdf8;
+
+animation:pulseChip 3s infinite;
+
+}
+
+
+
+.chip-core h2{
+
+font-size:55px;
+
+}
+
+
+.chip-core p{
+
+font-size:18px;
+
+}
+
+
+
+/* Chip Glow */
+
+@keyframes pulseChip{
+
+0%{
+box-shadow:0 0 20px #38bdf8;
+}
+
+50%{
+box-shadow:0 0 70px #38bdf8;
+}
+
+100%{
+box-shadow:0 0 20px #38bdf8;
+}
+
+}
+
+
+
+/* Circuit Lines */
+
+.line{
+
+position:absolute;
+height:2px;
+background:#38bdf8;
+box-shadow:0 0 15px #38bdf8;
+
+}
+
+
+
+.l1{
+
+width:300px;
+top:35%;
+left:0;
+animation:dataFlow 3s infinite;
+
+}
+
+
+.l2{
+
+width:400px;
+top:65%;
+right:0;
+animation:dataFlow 4s infinite reverse;
+
+}
+
+
+.l3{
+
+width:250px;
+top:50%;
+left:0;
+animation:dataFlow 5s infinite;
+
+}
+
+
+
+@keyframes dataFlow{
+
+from{
+
+transform:translateX(-300px);
+opacity:0;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateX(100vw);
+opacity:0;
+
+}
+
+}
+
+
+
+/* Chip Pins */
+
+.pin{
+
+position:absolute;
+width:20px;
+height:4px;
+background:#38bdf8;
+
+}
+
+
+.p1{
+
+left:-20px;
+top:50%;
+
+}
+
+
+.p2{
+
+right:-20px;
+top:50%;
+
+}
+
+
+.p3{
+
+top:-20px;
+left:50%;
+
+}
+
+
+.p4{
+
+bottom:-20px;
+left:50%;
+
+}
+/* RTL Skill Progress Animation */
+
+
+.skill{
+
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+margin:20px auto;
+max-width:500px;
+
+}
+
+
+.skill h3{
+
+margin-bottom:15px;
+color:#38bdf8;
+
+}
+
+
+
+.bar{
+
+height:12px;
+background:#020617;
+border-radius:20px;
+overflow:hidden;
+
+}
+
+
+
+.bar span{
+
+display:block;
+height:100%;
+background:#38bdf8;
+border-radius:20px;
+
+animation:progress 2s ease;
+
+}
+
+
+
+/* Skill Levels */
+
+.verilog{
+
+width:90%;
+
+}
+
+
+.systemverilog{
+
+width:80%;
+
+}
+
+
+.fpga{
+
+width:75%;
+
+}
+
+
+.asic{
+
+width:70%;
+
+}
+
+
+.embedded{
+
+width:75%;
+
+}
+
+
+
+/* Loading animation */
+
+@keyframes progress{
+
+from{
+
+width:0;
+
+}
+
+}
+
+
+
+/* Hover effect */
+
+.skill:hover{
+
+transform:translateY(-8px);
+box-shadow:0 0 25px #38bdf8;
+transition:0.4s;
+
+}
+/* Dark Semiconductor Theme */
+
+
+/* Grid Background */
+
+body{
+
+background:#020617;
+
+background-image:
+linear-gradient(#0f172a 1px, transparent 1px),
+linear-gradient(90deg,#0f172a 1px, transparent 1px);
+
+background-size:40px 40px;
+
+}
+
+
+
+/* Neon Circuit Background */
+
+.circuit-bg{
+
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+
+}
+
+
+
+.circuit-line{
+
+position:absolute;
+height:3px;
+background:#38bdf8;
+
+box-shadow:
+0 0 10px #38bdf8,
+0 0 30px #38bdf8;
+
+animation:flow 4s infinite linear;
+
+}
+
+
+
+.line1{
+
+width:300px;
+top:25%;
+left:-300px;
+
+}
+
+
+.line2{
+
+width:400px;
+top:55%;
+right:-400px;
+
+animation-delay:1s;
+
+}
+
+
+.line3{
+
+width:250px;
+top:75%;
+left:-250px;
+
+animation-delay:2s;
+
+}
+
+
+
+@keyframes flow{
+
+from{
+
+transform:translateX(0);
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+to{
+
+transform:translateX(140vw);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+/* Glass Cards */
+
+.box,
+.card,
+.project,
+.skill{
+
+background:rgba(15,23,42,0.65);
+
+border:1px solid rgba(56,189,248,0.3);
+
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+box-shadow:
+
+0 8px 30px rgba(0,0,0,0.4);
+
+transition:0.4s;
+
+}
+
+
+
+.box:hover,
+.card:hover,
+.project:hover{
+
+transform:
+translateY(-12px)
+scale(1.03);
+
+
+box-shadow:
+
+0 0 30px #38bdf8;
+
+}
+
+
+
+/* 3D Chip Animation */
+
+.chip{
+
+transform-style:preserve-3d;
+
+animation:
+
+chipRotate 6s infinite ease-in-out;
+
+}
+
+
+
+@keyframes chipRotate{
+
+0%{
+
+transform:rotateY(0deg);
+
+}
+
+
+50%{
+
+transform:rotateY(25deg);
+
+}
+
+
+100%{
+
+transform:rotateY(0deg);
+
+}
+
+}
+
+
+
+/* Neon Text */
+
+h1,h2{
+
+text-shadow:
+
+0 0 10px rgba(56,189,248,0.7);
+
+}
+
+
+
+
+
+header{
+
+position:sticky;
+top:0;
+z-index:10;
+
+background:rgba(15,23,42,0.7);
+
+backdrop-filter:blur(15px);
+
+border-bottom:1px solid rgba(56,189,248,0.3);
+
+}
+.skill img{
+
+animation:float 3s infinite;
+
+}
+
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+.particles{
+
+width:10px;
+height:10px;
+
+background:#38bdf8;
+
+border-radius:50%;
+
+position:fixed;
+
+top:20%;
+left:20%;
+
+box-shadow:
+
+100px 50px #38bdf8,
+200px 200px #38bdf8,
+350px 100px #38bdf8,
+500px 300px #38bdf8;
+
+animation:particles 8s infinite alternate;
+
+}
+
+
+@keyframes particles{
+
+from{
+
+transform:translateY(0);
+
+}
+
+
+to{
+
+transform:translateY(-80px);
+
+}
+
+}
